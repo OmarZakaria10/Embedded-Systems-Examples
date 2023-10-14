@@ -67,15 +67,6 @@ void CHANGE_DIRECTION (){
 	gpio_pin_toggle_logic(&m1);
 }
 
-
-
-
-
-
-
-
-
-
 int main() {
 
 	MCAL_TIMER0_Init(&t0);
@@ -90,21 +81,7 @@ gpio_pin_intialize(&m1);
 		MCAL_TIMER0_DutyCycle(&t0,speed);
 
 	}
-	/*
-	// Initialize I2C
-	_delay_ms(500);
-	I2C_Init();
-	int i =0;
 
-	while (1) {
-		// Send data to the slave
-		I2C_SendByte(SLAVE_ADDRESS, i);
-		i++;
-
-		// Delay for a while
-		_delay_ms(500);
-	}
-*/
 	return 0;
 }
 

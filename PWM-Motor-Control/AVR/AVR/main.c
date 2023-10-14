@@ -74,12 +74,11 @@ int main() {
 	MCAL_EXTI_Init(&x0);
 	MCAL_EXTI_Init(&x1);
 	MCAL_EXTI_Init(&x2);
-gpio_pin_intialize(&m0);
-gpio_pin_intialize(&m1);
+	gpio_pin_intialize(&m0);
+	gpio_pin_intialize(&m1);
 	
 	while(1){
 		MCAL_TIMER0_DutyCycle(&t0,speed);
-
 	}
 
 	return 0;

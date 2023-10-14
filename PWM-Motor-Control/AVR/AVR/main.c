@@ -57,10 +57,10 @@ void SPEED_UP (){
 	
 }
 void SPEED_DOWN (){
-		if (speed >0)
-		{
-			speed-=10;
-		}
+	if (speed >0)
+	{
+		speed-=10;
+	}
 }
 void CHANGE_DIRECTION (){
 	gpio_pin_toggle_logic(&m0);

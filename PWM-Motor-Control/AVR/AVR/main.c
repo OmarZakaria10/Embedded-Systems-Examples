@@ -51,16 +51,11 @@ EXTI_t x2 ={
 
 void SPEED_UP (){
 	if (speed <100)
-	{
-		speed+=10;
-	}
-	
+	speed+=10;
 }
 void SPEED_DOWN (){
 	if (speed >0)
-	{
-		speed-=10;
-	}
+	speed-=10;
 }
 void CHANGE_DIRECTION (){
 	gpio_pin_toggle_logic(&m0);

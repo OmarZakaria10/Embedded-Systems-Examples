@@ -51,30 +51,16 @@ EXTI_t x2 ={
 
 void SPEED_UP (){
 	if (speed <100)
-	{
-		speed+=10;
-	}
-	
+	speed+=10;
 }
 void SPEED_DOWN (){
-		if (speed >0)
-		{
-			speed-=10;
-		}
+	if (speed >0)
+	speed-=10;
 }
 void CHANGE_DIRECTION (){
 	gpio_pin_toggle_logic(&m0);
 	gpio_pin_toggle_logic(&m1);
 }
-
-
-
-
-
-
-
-
-
 
 int main() {
 
@@ -83,28 +69,13 @@ int main() {
 	MCAL_EXTI_Init(&x0);
 	MCAL_EXTI_Init(&x1);
 	MCAL_EXTI_Init(&x2);
-gpio_pin_intialize(&m0);
-gpio_pin_intialize(&m1);
+	gpio_pin_intialize(&m0);
+	gpio_pin_intialize(&m1);
 	
 	while(1){
 		MCAL_TIMER0_DutyCycle(&t0,speed);
-
 	}
-	/*
-	// Initialize I2C
-	_delay_ms(500);
-	I2C_Init();
-	int i =0;
 
-	while (1) {
-		// Send data to the slave
-		I2C_SendByte(SLAVE_ADDRESS, i);
-		i++;
-
-		// Delay for a while
-		_delay_ms(500);
-	}
-*/
 	return 0;
 }
 
